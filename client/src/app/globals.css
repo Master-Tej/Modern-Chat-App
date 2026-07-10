@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-dark-border;
+  }
+
+  body {
+    @apply bg-dark-bg text-gray-100 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600/50;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(75, 85, 99, 0.5) transparent;
+  }
+}
+
+/* Emoji picker overrides */
+.EmojiPickerReact {
+  --epr-bg-color: #172033 !important;
+  --epr-category-label-bg-color: #172033 !important;
+  --epr-hover-bg-color: #1E293B !important;
+  --epr-search-border-color: #1E293B !important;
+  --epr-category-label-text-color: #94A3B8 !important;
+  --epr-text-color: #FFFFFF !important;
+  --epr-picker-border-color: #1E293B !important;
+  --epr-picker-border-radius: 12px !important;
+  border: 1px solid #1E293B !important;
+}
